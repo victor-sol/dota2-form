@@ -7,15 +7,6 @@ import { useState } from 'react'
 
 const Formulario = (props) => {
 
-    const função = [
-        'Hard Carry',
-        'Mid',
-        'Offlane',
-        'Soft Support',
-        'Hard Support'
-    ]
-
-
     const [gamerTag, setGamerTag] = useState('')
     const [heroPool, setHeroPool] = useState('')
     const [imagem, setImagem] = useState('')
@@ -46,7 +37,7 @@ const Formulario = (props) => {
                 <CampoTexto
                     obrigatorio={true}
                     label="Hero Pool"
-                    placeholder="Digite sua Hero Pool..."
+                    placeholder="Digite sua Hero Pool...  (ex: Lion, Lina, IO)"
                     valor={heroPool}
                     aoAlterado={valor => setHeroPool(valor)}
                 />
@@ -59,7 +50,7 @@ const Formulario = (props) => {
                 <ListaSuspensa
                     obrigatorio={true}
                     label="Função"
-                    itens={função}
+                    itens={props.times}
                     valor={funcao}
                     aoAlterado={valor => setFuncao(valor)}
                 />
