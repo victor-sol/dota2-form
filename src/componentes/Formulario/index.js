@@ -15,7 +15,7 @@ const Formulario = (props) => {
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        props.aoJogadorCadastrado({
+        props.addJogador({
             gamerTag,
             heroPool,
             imagem,
@@ -50,7 +50,7 @@ const Formulario = (props) => {
                 <ListaSuspensa
                     obrigatorio={true}
                     label="Função"
-                    itens={props.times}
+                    itens={props.posicoes}
                     valor={funcao}
                     aoAlterado={valor => setFuncao(valor)}
                 />
