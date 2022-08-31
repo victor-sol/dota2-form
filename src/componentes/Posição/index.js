@@ -1,7 +1,7 @@
 import Doteiro from '../Doteiro'
-import './Funcao.css'
+import './Posicao.css'
 
-const Funcao = (props) => {
+const Posicao = (props) => {
     return (
         <section className='funcao'style={{ backgroundColor: props.corSecundaria }}> 
             <h3 style={ { borderColor: props.corPrimaria } }>{props.nome}</h3>
@@ -16,4 +16,4 @@ const Funcao = (props) => {
         </section>
     )
 }
-export default Funcao
+export default Posicao
