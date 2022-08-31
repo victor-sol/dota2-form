@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Funcao from './componentes/Funções';
+import Rodape from './componentes/Rodapé';
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
         jogadores={jogadores.filter(jogador => jogador.funcao === posicao.nome)}
 
       />)}
+      <Rodape/>
 
 
     </div>

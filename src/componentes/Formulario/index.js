@@ -21,12 +21,16 @@ const Formulario = (props) => {
             imagem,
             funcao
         })
+        setGamerTag('')
+        setHeroPool('')
+        setImagem('')
+        setFuncao('')
     }
 
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
-                <h2>Preencha os dados para criar o card do Doteiro do YOLO</h2>
+                <h2>Preencha os dados para criar o seu card do Doteiro</h2>
                 <CampoTexto
                     obrigatorio={true}
                     label="GamerTAG"
