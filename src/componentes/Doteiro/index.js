@@ -1,10 +1,10 @@
 import './Doteiro.css'
 
-const Doteiro = ({gamerTag, heroPool, imagem}) => {
+const Doteiro = ({gamerTag, heroPool, imagem, corDeFundo}) => {
     return(
         <div className='doteiro'>
-            <div className='cabecalho'>
-                <img src={imagem} alt={gamerTag}/>
+            <div className='cabecalho' style={{ backgroundColor: corDeFundo }}>
+                <img src={imagem} alt={gamerTag} />
             </div>
             <div className='rodape'>
                 <h4>{gamerTag}</h4>

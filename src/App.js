@@ -2,11 +2,12 @@ import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Funcao from './componentes/Funções';
+import Rodape from './componentes/Rodapé';
 
 
 function App() {
 
-  const times = [
+  const posicoes = [
     {
       nome: 'Hard Carry',
       corPrimaria: '#57c278',
@@ -36,7 +37,7 @@ function App() {
 
   const [jogadores, setJogador] = useState([])
 
-  const aoJogadorCadastrado = (jogador) => {
+  const addJogador = (jogador) => {
     console.log(jogador)
     setJogador([...jogadores, jogador])
   }
@@ -44,15 +45,21 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoJogadorCadastrado={jogadores => aoJogadorCadastrado(jogadores)} />
-      {times.map(time => <Funcao
-        key={time.nome}
-        nome={time.nome}
-        corPrimaria={time.corPrimaria}
-        corSecundaria={time.corSecundaria}
-        jogadores={jogadores.filter(jogador => jogador.funcao === time.nome)}
+
+      <Formulario 
+        posicoes={posicoes.map(posicao => posicao.nome)} 
+        addJogador={jogador => addJogador(jogador)} 
+      />
+
+      {posicoes.map(posicao => <Funcao
+        key={posicao.nome}
+        nome={posicao.nome}
+        corPrimaria={posicao.corPrimaria}
+        corSecundaria={posicao.corSecundaria}
+        jogadores={jogadores.filter(jogador => jogador.funcao === posicao.nome)}
 
       />)}
+      <Rodape/>
 
 
     </div>
