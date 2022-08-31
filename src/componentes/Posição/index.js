@@ -1,16 +1,12 @@
 import Doteiro from '../Doteiro'
-import './Funcao.css'
+import './Posicao.css'
 
-const Funcao = (props) => {
+const Posicao = (props) => {
     return (
-        props.jogadores.length > 0 && <section className='funcao'style={{ backgroundColor: props.corSecundaria }}> 
+        <section className='funcao'style={{ backgroundColor: props.corSecundaria }}> 
             <h3 style={ { borderColor: props.corPrimaria } }>{props.nome}</h3>
             <div className='jogadores'>
-
-                {props.jogadores.map( jogador => <Doteiro corDeFundo={props.corPrimaria}
-
                 {props.jogadores.map( jogador => <Doteiro 
-
                     key={jogador.gamerTag}
                     gamerTag={jogador.gamerTag} 
                     heroPool={jogador.heroPool}
@@ -20,4 +16,4 @@ const Funcao = (props) => {
         </section>
     )
 }
-export default Funcao
+export default Posicao
